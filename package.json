@@ -1,5 +1,5 @@
 {
-	"name": "tree-sitter-apache-dispatcher-config",
+	"name": "@darianbenam/tree-sitter-apache-dispatcher-config",
 	"version": "1.0.0",
 	"description": "Apache Dispatcher Config grammar for Tree-sitter.",
 	"main": "bindings/node",
