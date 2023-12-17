@@ -1,0 +1,32 @@
+$
+# <- function
+
+$include
+#^ function
+
+$include
+#      ^ function
+
+$include ""
+#      ^ function
+
+$include ""
+#        ^ string
+
+$include ""
+#         ^ string
+
+$include "" #
+#           ^ comment
+
+$include "farm_*.any" # Include all farms
+#         ^ string
+
+$include "farm_*.any" # Include all farms
+#                  ^ string
+
+$include "farm_*.any" # Include all farms
+#                     ^ comment
+
+$include "farm_*.any" # Include all farms
+#                                       ^ comment

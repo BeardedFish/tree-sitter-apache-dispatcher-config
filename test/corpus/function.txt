@@ -1,0 +1,127 @@
+=================
+Invalid Functions
+=================
+
+$
+
+$function
+
+$function ""
+
+$function "clientheaders.any"
+
+/farms {
+    $function "farm_*.any"
+}
+
+---
+
+(source_file
+  (function
+    (function_name))
+  (function
+    (function_name))
+  (function
+    (function_name)
+    (string))
+  (function
+    (function_name)
+    (string))
+  (property
+    (property_name)
+    (scoped_property
+      (function
+        (function_name)
+        (string)))))
+
+==============================
+Invalid Functions With Comments
+==============================
+
+$ # Example comment
+
+$function # Example comment
+
+$function "" # Example comment
+
+$function "clientheaders.any" # Example comment
+
+/farms {
+    $function "farm_*.any" # Example comment
+}
+
+---
+
+(source_file
+  (function
+    (function_name))
+  (comment)
+  (function
+    (function_name))
+  (comment)
+  (function
+    (function_name)
+    (string))
+  (comment)
+  (function
+    (function_name)
+    (string))
+  (comment)
+  (property
+    (property_name)
+    (scoped_property
+      (function
+        (function_name)
+        (string))
+      (comment))))
+
+================
+Include Function
+================
+
+$
+
+$include "test"
+
+$include ""
+
+$include "clientheaders.any"
+
+/farms {
+    $include "farm_*.any"
+}
+
+---
+
+(source_file
+  (function
+    (function_name))
+  (function
+    (function_name)
+    (string))
+  (function
+    (function_name)
+    (string))
+  (function
+    (function_name)
+    (string))
+  (property
+    (property_name)
+    (scoped_property
+      (function
+        (function_name)
+        (string)))))
+
+=============================
+Include Function With Comment
+=============================
+
+$include "farm_*.any" # Include all farms
+
+---
+
+(source_file
+  (function
+    (function_name)
+    (string))
+  (comment))

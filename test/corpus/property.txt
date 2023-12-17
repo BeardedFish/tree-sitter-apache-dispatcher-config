@@ -1,0 +1,167 @@
+====================
+Property Declaration
+====================
+
+/
+
+/property
+
+---
+
+(source_file
+  (property
+    (property_name))
+  (property
+    (property_name)))
+
+===============================
+Property With Value Declaration
+===============================
+
+/property ''
+
+/property ""
+
+/property 'value'
+
+/property "value"
+
+---
+
+(source_file
+  (property
+    (property_name)
+    (string))
+  (property
+    (property_name)
+    (string))
+  (property
+    (property_name)
+    (string))
+  (property
+    (property_name)
+    (string)))
+
+===========================
+Scoped Property Declaration
+===========================
+
+/property {}
+
+/property {
+    # Example Comment
+
+    /
+
+    /property ''
+
+    /property ""
+
+    /property 'value'
+
+    /property "value"
+
+    /property {
+        # Example Comment
+
+        /
+
+        /property ''
+
+        /property ""
+
+        /property 'value'
+
+        /property "value"
+
+        /property {}
+    }
+
+    /property {
+        "value1"
+        "value2"
+        "value3"
+    }
+}
+
+---
+
+(source_file
+  (property
+    (property_name)
+    (scoped_property))
+  (property
+    (property_name)
+    (scoped_property
+      (comment)
+      (property
+        (property_name))
+      (property
+        (property_name)
+        (string))
+      (property
+        (property_name)
+        (string))
+      (property
+        (property_name)
+        (string))
+      (property
+        (property_name)
+        (string))
+      (property
+        (property_name)
+        (scoped_property
+          (comment)
+          (property
+            (property_name))
+          (property
+            (property_name)
+            (string))
+          (property
+            (property_name)
+            (string))
+          (property
+            (property_name)
+            (string))
+          (property
+            (property_name)
+            (string))
+          (property
+            (property_name)
+            (scoped_property))))
+      (property
+        (property_name)
+        (scoped_property
+          (string)
+          (string)
+          (string))))))
+
+===========================================================
+Scoped Property Declaration With Opening Bracket On Newline
+===========================================================
+
+/property
+{
+
+}
+
+/property
+{
+    /property
+    {
+
+    }
+}
+
+---
+
+(source_file
+  (property
+    (property_name)
+    (scoped_property))
+  (property
+    (property_name)
+    (scoped_property
+      (property
+        (property_name)
+        (scoped_property)))))

@@ -1,0 +1,161 @@
+/
+# <- property
+
+/property
+# <- property
+
+/property
+#       ^ property
+
+/property ""
+# <- property
+
+/property ""
+#       ^ property
+
+/property ""
+#         ^ string
+
+/property ""
+#          ^ string
+
+/property "value"
+#         ^ string
+
+/property "value"
+#               ^ string
+
+/property {}
+# <- property
+
+/property {}
+#       ^ property
+
+/property {}
+#         ^ punctuation.bracket
+
+/property {}
+#          ^ punctuation.bracket
+
+/property {
+#         ^ punctuation.bracket
+
+	/
+	# <- property
+
+	/property
+	# <- property
+
+	/property
+	#       ^ property
+
+	/property ''
+	# <- property
+
+	/property ''
+	#       ^ property
+
+	/property ''
+	#         ^ string
+
+	/property ''
+	#          ^ string
+
+	/property 'value'
+	#         ^ string
+
+	/property 'value'
+	#               ^ string
+
+	/property '0'
+	#          ^ string
+
+	/property '100'
+	#          ^ string
+
+	/property '100'
+	#            ^ string
+
+	/property 'value' # Example comment
+	#                 ^ comment
+
+	/property 'value' # Example comment
+	#                                 ^ comment
+
+	/property ""
+	# <- property
+
+	/property ""
+	#       ^ property
+
+	/property ""
+	#         ^ string
+
+	/property ""
+	#          ^ string
+
+	/property "0"
+	#          ^ string
+
+	/property "100"
+	#          ^ string
+
+	/property "100"
+	#            ^ string
+
+	/property "value"
+	#         ^ string
+
+	/property "value"
+	#               ^ string
+
+	/property "value" # Example comment
+	#                 ^ comment
+
+	/property "value" # Example comment
+	#                                 ^ comment
+
+	/property 0
+	#         ^ number
+
+	/property 100
+	#         ^ number
+
+	/property 100
+	#           ^ number
+
+	/property 100
+	#         ^ number
+
+	/property 100 # Example comment
+	#             ^ comment
+
+	/property 100 # Example comment
+	#                             ^ comment
+
+	/property { # Example comment
+	#           ^ comment
+		''
+		# <- string
+
+		""
+		# <- string
+	} # Example comment
+	# ^ comment
+
+	# /
+	# ^ comment
+
+	# /property
+	# ^ comment
+
+	# /property ""
+	# ^ comment
+
+	# /property ""
+	#           ^ comment
+
+	# /property ""
+	#            ^ comment
+}
+# <- punctuation.bracket
